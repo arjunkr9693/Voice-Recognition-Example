@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // Handle Request result
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == RECORD_AUDIO_PERMISSION_REQUEST_CODE) {
@@ -90,4 +91,5 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         speechRecognizer.destroy()
     }
+
 }
